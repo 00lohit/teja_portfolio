@@ -36,12 +36,12 @@ export default function Home() {
       ></motion.div>
       <div className="scrollbar-none w-screen h-screen   overflow-auto overflow-x-hidden snap-y">
         <Hero setCursorVariant={setCursorVariant} CursorVariant={""} />
-   
-        <PageWrapper
+
+        {/* <PageWrapper
           setCursorVariant={setCursorVariant}
           CursorVariant={""}
           bg={"#FFC700"}
-        ></PageWrapper>
+        ></PageWrapper> */}
         <Work setCursorVariant={setCursorVariant} />
       </div>
     </div>

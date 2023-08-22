@@ -81,13 +81,13 @@ const Individual = ({
       <div className="flex-1 items-center  flex flex-col justify-between p-6">
         <p
           style={{ color: titleColor }}
-          className="font-extrabold text-4xl z-30"
+          className="font-extrabold text-4xl z-30 cursor-default"
         >
           WORK:
         </p>
         <h2
           style={{ color: titleColor }}
-          className="font-extrabold text-5xl md:text-9xl text-center z-30"
+          className="font-extrabold text-5xl md:text-9xl text-center z-30 cursor-default"
         >
           {title}
         </h2>
@@ -98,7 +98,7 @@ const Individual = ({
         >
           <p
             style={{ color: isDark(titleColor) ? "#fff" : "#000" }}
-            className="font-semibold text-xl mr-2 "
+            className="font-semibold text-xl mr-2 cursor-default"
           >
             VIEW PROJECT
           </p>
