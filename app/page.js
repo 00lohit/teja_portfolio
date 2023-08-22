@@ -16,6 +16,7 @@ import partner from "../public/work/partner.svg";
 import seller from "../public/work/seller.svg";
 import Hero from "./Home/Hero";
 import Experience from "./Home/Experience";
+import Footer from "./Home/Footer";
 
 export default function Home() {
   const ref = useRef(null);
@@ -45,6 +46,7 @@ export default function Home() {
           bg={"#FFC700"}
         ></PageWrapper> */}
         <Work setCursorVariant={setCursorVariant} />
+        <Footer setCursorVariant={setCursorVariant} CursorVariant={""} />
       </div>
     </div>
   );

@@ -1,22 +1,27 @@
 import PageWrapper from "../PageWrapper";
-import Skills from "../../public/skills.svg";
-import Name from "../../public/name.svg";
-import Globe from "../../public/globe.svg";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Scroll from "../../public/scroll.svg";
+import Star from "../../public/star.svg";
+import TNfooter from "../../public/TNfooter.svg";
 
 export default function Footer({ setCursorVariant, CursorVariant }) {
   return (
     <PageWrapper
       setCursorVariant={setCursorVariant}
       CursorVariant={CursorVariant}
-      bg={"#FFC700"}
+      bg={"#252525"}
       className="h-[300vh]"
     >
-      <div className="flex-1 flex justify-center items-center flex-col ">
-        <div className="flex justify-center items-center relative">
-          <div className="relative md:absolute mr-7">
+      <div className="flex-1 flex flex-col items-center justify-center">
+        <div className="flex items-center justify-center">
+          <div className="relative flex justify-center items-center mr-9  mb-24">
+            <Image
+              className="absolute z-50"
+              priority
+              src={TNfooter}
+              alt="footer"
+            />
+
             <motion.div
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
@@ -26,33 +31,35 @@ export default function Footer({ setCursorVariant, CursorVariant }) {
                 transformOrigin: "center",
               }}
             >
-              <Image priority src={Globe} alt="Skills" />
+              <Image priority src={Star} alt="footer" />
             </motion.div>
           </div>
-          <Image priority src={Name} alt="Skills" />
-        </div>
-        <div>
-          <motion.div
-            initial={{ x: "0%" }}
-            animate={{ x: "-100%" }}
-            transition={{ ease: "linear", duration: 20, repeat: Infinity }}
-            style={{ display: "flex", alignItems: "center", scale: 1.7 }}
-            className="w-full mt-48 mb-8"
-          >
-            <Image priority src={Skills} alt="Skills" />
-            <Image priority src={Skills} alt="Skills" />
-          </motion.div>
+
+          <div>
+            <div className="flex flex-col justify-center items-center">
+              <h2
+                style={{ color: "#FFF9DC" }}
+                className="font-extrabold text-5xl md:text-9xl text-center z-30 cursor-default"
+              >
+                LET’S CONNECT
+              </h2>
+              <div className="mt-6">
+                <a href="mailto:tejanune00722@gmail.com">
+                  <p
+                    style={{ color: "#FFF9DC" }}
+                    className="text-5xl font-semibold  cursor-default underline"
+                  >
+                    tejanune00722@gmail.com
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="flex items-center justify-center mb-7">
-        <p
-          style={{ color: "#000" }}
-          className="font-semibold text-xl mr-2 cursor-default"
-        >
-          SCROLL DOWN
-        </p>
-        <Image priority src={Scroll} alt="Skills" />
-      </div>
+      <p className="text-xl font-normal  cursor-default text-white mb-6">
+        {"ALL CONTENT © TEJA NUNE 2023"}
+      </p>
     </PageWrapper>
   );
 }
