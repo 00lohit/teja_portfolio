@@ -35,8 +35,11 @@ export default function Experience({ setCursorVariant, CursorVariant }) {
             link: "",
             date: "FREELANCE",
           },
-        ].map(({ title, link, date }) => (
-          <div className="w-full border-b-2 border-black py-6 flex justify-between items-center hover:scale-[1.01] transition duration-300 transform hover:-translateZ-0.5">
+        ].map(({ title, link, date }, i) => (
+          <div
+            key={i.toString()}
+            className="w-full border-b-2 border-black py-6 flex justify-between items-center hover:scale-[1.01] transition duration-300 transform hover:-translateZ-0.5"
+          >
             <p className="font-semibold text-3xl mr-2 cursor-default text-black ">
               {title}
             </p>
