@@ -36,7 +36,7 @@ export default function Footer({ setCursorVariant, CursorVariant }) {
           </div>
 
           <div>
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center mr-44">
               <h2
                 style={{ color: "#FFF9DC" }}
                 className="font-extrabold text-5xl md:text-9xl text-center z-30 cursor-default"
