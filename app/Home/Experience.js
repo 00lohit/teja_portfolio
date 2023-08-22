@@ -22,35 +22,55 @@ export default function Experience({ setCursorVariant, CursorVariant }) {
         {[
           {
             title: "HYPOSOFT GLOBAL SOLUTIONS",
-            link: "",
+            link: "https://hyposoft.in/",
             date: " 2022 FEBRUARY - PRESENT (FULL TIME)",
           },
           {
             title: "FARMOR AGRI SOLUTIONS",
-            link: "",
+            link: "https://farmor.ag/",
             date: "4 MONTHS | 2021 OCTOBER - 2022 JANUARY (INTERNSHIP)",
           },
           {
             title: "CHAINLINK TECHNOLOGY PVT. LTD",
-            link: "",
+            link: "#",
             date: "FREELANCE",
           },
-        ].map(({ title, link, date }, i) => (
-          <div
-            key={i.toString()}
-            className="w-full border-b-2 border-black py-6 flex justify-between items-center hover:scale-[1.01] transition duration-300 transform hover:-translateZ-0.5"
-          >
-            <p className="font-semibold text-3xl mr-2 cursor-default text-black ">
-              {title}
-            </p>
-            <div className="flex items-center justify-center">
-              <p className="font-semibold text-xl mr-2 cursor-default text-black ">
-                {date}
+        ].map(({ title, link, date }, i) =>
+          date !== "FREELANCE" ? (
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={link}
+              key={i.toString()}
+              className="w-full border-b-2 border-black py-6 flex justify-between items-center hover:scale-[1.01] transition duration-300 transform hover:-translateZ-0.5"
+            >
+              <p className="font-semibold text-3xl mr-2 cursor-default text-black ">
+                {title}
               </p>
-              <Image priority src={WorkArrow} alt="Link" />
+              <div className="flex items-center justify-center">
+                <p className="font-semibold text-xl mr-2 cursor-default text-black ">
+                  {date}
+                </p>
+                <Image priority src={WorkArrow} alt="Link" />
+              </div>
+            </a>
+          ) : (
+            <div
+              key={i.toString()}
+              className="w-full border-b-2 border-black py-6 flex justify-between items-center hover:scale-[1.01] transition duration-300 transform hover:-translateZ-0.5"
+            >
+              <p className="font-semibold text-3xl mr-2 cursor-default text-black ">
+                {title}
+              </p>
+              <div className="flex items-center justify-center">
+                <p className="font-semibold text-xl mr-2 cursor-default text-black ">
+                  {date}
+                </p>
+                <Image priority src={WorkArrow} alt="Link" />
+              </div>
             </div>
-          </div>
-        ))}
+          )
+        )}
       </div>
 
       <div>
