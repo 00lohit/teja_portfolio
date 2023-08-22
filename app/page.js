@@ -15,6 +15,7 @@ import mirchi from "../public/work/mirchi.svg";
 import partner from "../public/work/partner.svg";
 import seller from "../public/work/seller.svg";
 import Hero from "./Home/Hero";
+import Experience from "./Home/Experience";
 
 export default function Home() {
   const ref = useRef(null);
@@ -36,6 +37,7 @@ export default function Home() {
       ></motion.div>
       <div className="scrollbar-none w-screen h-screen   overflow-auto overflow-x-hidden snap-y">
         <Hero setCursorVariant={setCursorVariant} CursorVariant={""} />
+        <Experience setCursorVariant={setCursorVariant} CursorVariant={""} />
 
         {/* <PageWrapper
           setCursorVariant={setCursorVariant}

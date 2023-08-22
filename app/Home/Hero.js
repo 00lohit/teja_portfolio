@@ -4,6 +4,7 @@ import Name from "../../public/name.svg";
 import Globe from "../../public/globe.svg";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Scroll from "../../public/Scroll.svg";
 
 export default function Hero({ setCursorVariant, CursorVariant }) {
   return (
@@ -13,7 +14,7 @@ export default function Hero({ setCursorVariant, CursorVariant }) {
       bg={"#FFC700"}
       className="h-[300vh]"
     >
-      <div className="flex-1 flex justify-center items-center flex-col">
+      <div className="flex-1 flex justify-center items-center flex-col ">
         <div className="flex justify-center items-center relative">
           <div className="relative md:absolute mr-7">
             <motion.div
@@ -36,12 +37,21 @@ export default function Hero({ setCursorVariant, CursorVariant }) {
             animate={{ x: "-100%" }}
             transition={{ ease: "linear", duration: 20, repeat: Infinity }}
             style={{ display: "flex", alignItems: "center", scale: 1.7 }}
-            className="w-full my-48"
+            className="w-full mt-48 mb-8"
           >
             <Image priority src={Skills} alt="Skills" />
             <Image priority src={Skills} alt="Skills" />
           </motion.div>
         </div>
+      </div>
+      <div className="flex items-center justify-center mb-7">
+        <p
+          style={{ color: "#000" }}
+          className="font-semibold text-xl mr-2 cursor-default"
+        >
+          SCROLL DOWN
+        </p>
+        <Image priority src={Scroll} alt="Skills" />
       </div>
     </PageWrapper>
   );
