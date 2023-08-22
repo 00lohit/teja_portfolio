@@ -4,7 +4,7 @@ import Name from "../../public/name.svg";
 import Globe from "../../public/globe.svg";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Scroll from "../../public/Scroll.svg";
+import Scroll from "../../public/scroll.svg";
 
 export default function Hero({ setCursorVariant, CursorVariant }) {
   return (
