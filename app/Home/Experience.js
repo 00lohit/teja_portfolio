@@ -66,7 +66,12 @@ export default function Experience({ setCursorVariant, CursorVariant }) {
                 <p className="font-semibold text-xl mr-2 cursor-default text-black ">
                   {date}
                 </p>
-                <Image priority src={WorkArrow} alt="Link" />
+                <Image
+                  priority
+                  src={WorkArrow}
+                  style={{ opacity: link == "#" ? 0.3 : 1 }}
+                  alt="Link"
+                />
               </div>
             </div>
           )
