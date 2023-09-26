@@ -84,8 +84,9 @@ const useCursorComponent = (ref) => {
 
   let defaultStyle = {
     opacity: 1,
-    height: 10,
-    width: 10,
+    height: mouseXPosition === 0 ? 0 : 10,
+    width: mouseYPosition == 0 ? 0 : 10,
+
     backgroundColor: "black",
     x: mouseXPosition,
     y: mouseYPosition,
