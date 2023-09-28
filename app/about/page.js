@@ -55,8 +55,8 @@ let data = [
 const Profiles = () => {
   return (
     <div className=" w-full p-9 px-16 bg-[#FDD3D8] rounded-2xl flex justify-between">
-      {data.map(({ title, className, link, image }) => (
-        <a href={link}>
+      {data.map(({ title, className, link, image }, i) => (
+        <a key={i.toString()} href={link}>
           <div className="flex group items-center justify-center">
             <p className={className}>{title}</p>
             <div className="w-10 h-10 flex justify-center items-center">
